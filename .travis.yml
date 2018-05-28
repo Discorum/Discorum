@@ -16,4 +16,4 @@ before_install:
     - travis_retry composer self-update
     - composer install
 
-install: phpunit --bootstrap vendor/autoload.php tests
+script: vendor/bin/phpunit
