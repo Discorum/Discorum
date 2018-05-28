@@ -21,4 +21,4 @@ If you find a security vulnerability within Discorum, we ask that you report it 
 
 ## License
 
-MIT © Nicholas Sylke & Tyler Richards
+Discorum is open-sourced software licensed under the [MIT license](https://github.com/Discorum/Discorum/blob/master/LICENSE).
