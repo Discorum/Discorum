@@ -41,4 +41,8 @@ $container['notFoundHandler'] = function ($container) {
     };
 };
 
+$container['HomeController'] = function($container) {
+    return new \Discorum\Controller\HomeController($container);
+}
+
 require __DIR__ . '/routes.php';
