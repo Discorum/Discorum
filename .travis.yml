@@ -12,8 +12,10 @@ cache:
     directories:
         - $HOME/.composer/cache
 
-before_install:
+before_script:
     - composer self-update
-
-install:
     - composer install
+    - composer dump-autoload -o
+
+script:
+    - vendor/bin/phpunit
