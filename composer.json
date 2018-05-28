@@ -27,6 +27,11 @@
     "require-dev": {
         "phpunit/phpunit": "~7.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Discorum\\": "src/Discorum"
+        }
+    },
     "scripts": {
         "start": "php -S localhost:8080 -t public"
     }
