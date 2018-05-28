@@ -2,6 +2,7 @@
 
 <p>
     <a href="https://discord.gg/GJtaVjQ"><img src="https://discordapp.com/api/guilds/450508841738829826/widget.png" alt="Discorum Discord Server" /></a>
+    <a href="https://travis-ci.org/Discorum/Discorum"><img src="https://api.travis-ci.org/Discorum/Discorum.svg?branch=master" alt="Discorum Travis Build Test"></a>
 </p>
 Discorum is open-source forum software designed by Discord users for Discord communities.
 
