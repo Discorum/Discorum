@@ -1,0 +1,19 @@
+language: php
+
+sudo: false
+
+matrix:
+    fast_finish: true
+    include:
+        - php: 7.1
+        - php: 7.2
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+before_install:
+    - composer self-update
+
+install:
+    - composer install
