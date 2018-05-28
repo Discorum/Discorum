@@ -8,29 +8,33 @@ $app = new \Slim\App([
     ]
 ]);
 
-$c = $app->getContainer();
+$container = $app->getContainer();
 
-$c['view'] = function ($c) {
-    $view = new \Slim\Views\Twig(__DIR__ . 'app/views', ['cache' => false]);
+$container['view'] = function ($container) {
+    $view = new \Slim\Views\Twig(__DIR__ . '/../views', [
+        'cache' => false
+    ]);
 
-    $basePath = rtrim(str_ireplace('index.php', '', $c['request']->getUri()->getBasePath()), '/');
-    $view->addExtension(new \Slim\Views\TwigExtension($c['router'], $basePath));
+    $view->addExtension(new \Slim\Views\TwigExtension(
+        $container->router,
+        $container->request->getUri()
+    ));
 
     return $view;
-};
+}
 
-$c['errorHandler'] = function ($c) {
-    return function ($request, $response, $exception) use ($c) {
-        return $c['response']
+$container['errorHandler'] = function ($container) {
+    return function ($request, $response, $exception) use ($container) {
+        return $container['response']
             ->withStatus(500)
             ->withHeader('Content-Type', 'text/html')
             ->write('An internal error occurred.');
     };
 };
 
-$c['notFoundHandler'] = function ($c) {
-    return function ($request, $response) use ($c) {
-        return $c['response']
+$container['notFoundHandler'] = function ($container) {
+    return function ($request, $response) use ($container) {
+        return $container['response']
             ->withStatus(404)
             ->withHeader('Content-Type', 'text/html')
             ->write('The page you were looking for was not found.');

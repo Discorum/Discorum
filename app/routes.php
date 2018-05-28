@@ -1,5 +1,5 @@
 <?php
 
 $app->get('/', function($request, $response) {
-    return 'Discorum!';
+    return $this->view->render($response, 'index.twig');
 });
