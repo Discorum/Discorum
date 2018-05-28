@@ -5,6 +5,9 @@
     "keywords": ["discord", "discordapp", "forum", "discussion"],
     "homepage": "https://discorum.com",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/Discorum/Discorum/issues"
+    },
     "authors": [
         {
             "name": "Nicholas Sylke",
@@ -28,5 +31,4 @@
     "scripts": {
         "start": "php -S localhost:8080 -t public"
     }
-
 }
