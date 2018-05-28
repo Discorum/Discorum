@@ -1,2 +1,7 @@
-/logs/
-/vendor/
+vendor/
+logs/
+
+composer.lock
+composer.phar
+
+phpunit.xml
