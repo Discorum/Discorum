@@ -11,7 +11,7 @@ $app = new \Slim\App([
 $container = $app->getContainer();
 
 $container['view'] = function ($container) {
-    $view = new \Slim\Views\Twig(__DIR__ . '/../views', [
+    $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
         'cache' => false
     ]);
 
