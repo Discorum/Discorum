@@ -1,5 +1,6 @@
 ## Discorum
 
+<a href="https://discord.gg/GJtaVjQ"><img src="https://discordapp.com/api/guilds/450508841738829826/widget.png" alt="Discorum Discord Server" /></a>
 Discorum is open-source forum software designed by Discord users for Discord communities.
 
 
