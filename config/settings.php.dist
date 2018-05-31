@@ -1,0 +1,18 @@
+<?php 
+
+return [
+	'settings' => [
+		'displayErrors' => true,
+		'addContentLengthHeader' => true,
+
+		'database' => [
+			'driver' => 'mysql',
+			'host' => '',
+			'database' => '',
+			'username' => '' ,
+			'password' => '',
+			'charset' => 'utf8',
+			'collation' => 'utf8_unicode_ci'
+		]
+	]
+];
