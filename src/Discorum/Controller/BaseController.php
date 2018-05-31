@@ -2,7 +2,7 @@
 
 namespace Discorum\Controller;
 
-class BaseController
+abstract class BaseController
 {
     protected $container;
 
