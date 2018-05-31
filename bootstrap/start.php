@@ -8,6 +8,15 @@ $app = new \Slim\App($settings);
 
 $container = $app->getContainer();
 
+$capsule = new \Illuminate\Database\Capsule\Manager;
+$capsule->addConnection($container['settings']['database']);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+$container['database'] = function ($container) use ($capsule) {
+    return $capsule;
+};
+
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
         'cache' => false
