@@ -28,7 +28,7 @@ $container['errorHandler'] = function ($container) {
     return function ($request, $response, $exception) use ($container) {
         return $container->view->render(
             $response->withStatus(500),
-            '500.twig',
+            'errors/500.twig',
             []
         );
     };
@@ -38,7 +38,7 @@ $container['notFoundHandler'] = function ($container) {
     return function ($request, $response) use ($container) {
         return $container->view->render(
             $response->withStatus(404),
-            '404.twig',
+            'errors/404.twig',
             []
         );
     };
