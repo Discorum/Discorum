@@ -1,6 +1,7 @@
 <?php
 
 namespace Discorum\Controller;
+require 'BaseController.php';
 
 class HomeController extends BaseController
 {
