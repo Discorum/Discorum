@@ -2,11 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new \Slim\App([
-    'settings' => [
-        'displayErrorDetails' => true
-    ]
-]);
+$settings = require __DIR__ . '/../config/settings.php';
+
+$app = new \Slim\App($settings);
 
 $container = $app->getContainer();
 
