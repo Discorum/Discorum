@@ -1,6 +1,8 @@
 vendor/
 logs/
 
+config/settings.php
+
 composer.lock
 composer.phar
 
