@@ -2,7 +2,7 @@
 
 namespace Discorum\Controller;
 
-class HomeController extends BaseController
+class HomeController extends Controller
 {
     public function index($request, $response)
     {
