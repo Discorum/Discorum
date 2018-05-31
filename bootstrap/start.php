@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/Discorum/Controller/HomeController.php';
 
 $app = new \Slim\App([
     'settings' => [
@@ -25,19 +26,21 @@ $container['view'] = function ($container) {
 
 $container['errorHandler'] = function ($container) {
     return function ($request, $response, $exception) use ($container) {
-        return $container['response']
-            ->withStatus(500)
-            ->withHeader('Content-Type', 'text/html')
-            ->write('An internal error occurred.');
+        return $container->view->render(
+            $response->withStatus(500),
+            '500.twig',
+            []
+        );
     };
 };
 
 $container['notFoundHandler'] = function ($container) {
     return function ($request, $response) use ($container) {
-        return $container['response']
-            ->withStatus(404)
-            ->withHeader('Content-Type', 'text/html')
-            ->write('The page you were looking for was not found.');
+        return $container->view->render(
+            $response->withStatus(404),
+            '404.twig',
+            []
+        );
     };
 };
 
