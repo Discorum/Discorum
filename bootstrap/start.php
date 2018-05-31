@@ -1,7 +1,6 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../src/Discorum/Controller/HomeController.php';
 
 $app = new \Slim\App([
     'settings' => [
