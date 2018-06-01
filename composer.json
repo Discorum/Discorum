@@ -1,7 +1,6 @@
 {
     "name": "discorum/discorum",
     "description": "Forum software designed by Discord users for Discord users",
-    "version": "0.0.1",
     "keywords": ["discord", "discordapp", "discorum", "forum", "discussion"],
     "homepage": "https://discorum.com",
     "license": "MIT",
