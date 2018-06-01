@@ -1,4 +1,12 @@
-# Discorum [![Build Status](https://travis-ci.org/Discorum/Discorum.svg)](https://travis-ci.org/Discorum/Discorum)
+<p align="center">
+	<a href="https://discorum.com" target="_blank"><img src="http://nsylke.me/img/discorum.png"></a>
+</p>
+
+<p align="center">
+	<a href="https://travis-ci.org/discorum/discorum"><img src="https://travis-ci.org/discorum/discorum.svg" alt="Build Status"></a>
+</p>
+
+# About Discorum 
 
 Discorum is open-source forum software designed by Discord users for Discord communities.
 
