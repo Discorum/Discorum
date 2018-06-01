@@ -2,11 +2,13 @@
     "name": "discorum/discorum",
     "description": "Forum software designed by Discord users for Discord users",
     "version": "0.0.1",
-    "keywords": ["discord", "discordapp", "forum", "discussion"],
+    "keywords": ["discord", "discordapp", "discorum", "forum", "discussion"],
     "homepage": "https://discorum.com",
     "license": "MIT",
+    "type": "project",
     "support": {
-        "issues": "https://github.com/Discorum/Discorum/issues"
+        "issues": "https://github.com/discorum/discorum/issues",
+        "source": "https://github.com/discorum/discorum"
     },
     "authors": [
         {
@@ -32,7 +34,9 @@
             "Discorum\\": "src/Discorum"
         }
     },
-    "scripts": {
-        "start": "php -S localhost:8080 -t public"
-    }
+    "config": {
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
