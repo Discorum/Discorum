@@ -31,27 +31,7 @@ $container['view'] = function ($container) {
 };
 
 $container['errorHandler'] = function ($container) {
-    return function ($request, $response, $exception) use ($container) {
-        return $container->view->render(
-            $response->withStatus(500),
-            'errors/500.twig',
-            []
-        );
-    };
-};
-
-$container['notFoundHandler'] = function ($container) {
-    return function ($request, $response) use ($container) {
-        return $container->view->render(
-            $response->withStatus(404),
-            'errors/404.twig',
-            []
-        );
-    };
-};
-
-$container['HomeController'] = function($container) {
-    return new \App\Controller\HomeController($container);
+    return new \Discorum\Http\Handler\ErrorHandler($container->get('settings')['displayErrorDetails']);
 };
 
 require __DIR__ . '/../app/routes.php';
