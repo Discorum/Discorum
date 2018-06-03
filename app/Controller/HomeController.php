@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use Discorum\Controller\AbstractController;
+use Discorum\Http\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
