@@ -1,3 +1,5 @@
 <?php
 
-$app->get('/', 'HomeController:index');
+use App\Controller\HomeController;
+
+$app->get('/', HomeController::class . ':index');
