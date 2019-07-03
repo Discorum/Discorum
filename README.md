@@ -27,7 +27,7 @@ If you find a security vulnerability within Discorum, we ask that you report it 
 
 ## Created By
 
-- [Nicholas Sylke](https://github.com/nsylke) (Nick#4490)
+- [Nicholas Sylke](https://github.com/nsylke) (nsylke#4490)
 - [Tyler Richards](https://github.com/tjrgg) (tjrgg#0130)
 
 
